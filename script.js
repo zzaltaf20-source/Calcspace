@@ -1913,3 +1913,23 @@ window.addEventListener('hashchange', route);
 /* ---------- init ---------- */
 $('#toolCount').textContent = ORDER.length;
 route();
+/* CalcSpace: Open dedicated SEO pages */
+(function () {
+  const pages = {
+    age: "/age-calculator/",
+    percent: "/percentage-calculator/",
+    emi: "/emi-calculator/",
+    gpa: "/gpa-calculator/"
+  };
+
+  document.addEventListener("click", function (event) {
+    const button = event.target.closest("[data-open]");
+    if (!button) return;
+
+    const page = pages[button.dataset.open];
+    if (page) {
+      event.preventDefault();
+      window.location.href = page;
+    }
+  });
+})();
