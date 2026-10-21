@@ -335,3 +335,14 @@ code{font-family:"JetBrains Mono",monospace; font-size:.86em; background:var(--s
   *,*::before,*::after{transition:none!important; animation:none!important}
   html{scroll-behavior:auto}
 }
+.developer-credit {
+  text-align: center;
+  padding: 20px 12px;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.developer-credit p {
+  margin: 6px 0;
+}
