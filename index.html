@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CalcSpace — All-in-One Calculator Hub</title>
+<meta name="description" content="CalcSpace: 40 free calculators and converters in one clean workspace. Basic, scientific, student, financial, date & time, unit conversion and advanced math — 100% in your browser.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c7a5f'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='34' fill='white' text-anchor='middle'%3E=%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ======= SVG icon sprite ======= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-basic" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7.5h7"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 15.5h.01M12 15.5h.01M15.5 15.5h.01M8.5 19h.01M12 19h.01M15.5 19h.01"/></symbol>
+    <symbol id="i-sci" viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M6.5 16.5c3.5 0 4-9.5 8-9.5 2 0 3 1.5 3.5 3"/></symbol>
+    <symbol id="i-student" viewBox="0 0 24 24"><path d="M12 4 2.5 8.8l9.5 4.7 9.5-4.7L12 4z"/><path d="M6.5 11.2v4.6c0 1.6 2.5 2.9 5.5 2.9s5.5-1.3 5.5-2.9v-4.6"/><path d="M21.5 9v5"/></symbol>
+    <symbol id="i-fin" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-date" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-conv" viewBox="0 0 24 24"><path d="M7 4 3 8l4 4"/><path d="M3 8h13"/><path d="m17 12 4 4-4 4"/><path d="M21 16H8"/></symbol>
+    <symbol id="i-math" viewBox="0 0 24 24"><path d="M18 5H7l6.5 7L7 19h11"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.3 1.2 6.1L12 16.9l-5.5 2.9 1.2-6.1L3.2 9.4l6.1-.8L12 3z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4.5 4.5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 13.5A8.5 8.5 0 1 1 10.5 3.5a6.8 6.8 0 0 0 10 10z"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M11 5l-7 7 7 7"/><path d="M4 12h16"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 5H7a2 2 0 0 0-2 2v8"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></symbol>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="brand" href="#/" aria-label="CalcSpace home">
+      <span class="brand-mark" aria-hidden="true">=</span>
+      <span class="brand-name">Calc<em>Space</em></span>
+    </a>
+    <p class="tagline">All-in-One Calculator Hub</p>
+    <div class="top-actions">
+      <button id="themeBtn" class="iconbtn" type="button" aria-label="Toggle dark / light theme" title="Toggle theme">
+        <svg class="ic sun"><use href="#i-sun"/></svg>
+        <svg class="ic moon"><use href="#i-moon"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HOME ================= -->
+  <section id="view-home">
+    <div class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span id="toolCount">40</span> calculators · 7 categories · 100% private, in-browser</p>
+          <h1>All your calculators.<br>One clean space.</h1>
+          <p class="lede">Basic, scientific, student, financial, date &amp; time, unit conversion and advanced math — fast, accurate and free. No sign-up, no ads, everything runs on your device.</p>
+          <div class="searchbox">
+            <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+            <input id="searchInp" type="search" placeholder="Search calculators — try “emi”, “age”, “gcd”, “gst”…" autocomplete="off" aria-label="Search calculators">
+            <kbd class="kbd" aria-hidden="true">/</kbd>
+          </div>
+          <div class="popular">
+            <span class="popular-lb">Popular</span>
+            <button class="pill" type="button" data-open="emi">EMI</button>
+            <button class="pill" type="button" data-open="age">Age</button>
+            <button class="pill" type="button" data-open="percent">Percentage</button>
+            <button class="pill" type="button" data-open="gpa">GPA</button>
+            <button class="pill" type="button" data-open="quadratic">Quadratic</button>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="qcalc">
+            <div class="qcalc-top"><span class="qcalc-tt">Quick Calc</span><span class="qcalc-badge">live engine</span></div>
+            <input id="quickInp" class="qcalc-in" type="text" inputmode="decimal" placeholder="25 * 4 + 12%" autocomplete="off" spellcheck="false" aria-label="Quick calculation">
+            <div class="qcalc-out" id="quickOut" aria-live="polite">= 0</div>
+            <p class="qcalc-hint">Percent works as ÷100 · functions like <code>sqrt(144)</code> · press <kbd class="kbd">↵</kbd> to continue in Standard Calculator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="catbar" aria-label="Calculator categories">
+      <div class="shell"><div id="catbar" class="catbar-in"></div></div>
+    </nav>
+
+    <div class="shell"><div id="home-dyn"></div></div>
+  </section>
+
+  <!-- ================= CALCULATOR VIEW ================= -->
+  <section id="view-calc" hidden>
+    <div class="shell calc-shell">
+      <div class="calc-top">
+        <button id="backBtn" class="btn ghost sm" type="button"><svg class="ic"><use href="#i-back"/></svg> All calculators</button>
+        <button id="calcStar" class="star big" type="button" aria-pressed="false" aria-label="Add to favourites"><svg class="ic"><use href="#i-star"/></svg></button>
+      </div>
+      <div class="calc-head">
+        <span id="calcCat" class="cattag"></span>
+        <h1 id="calcTitle" tabindex="-1"></h1>
+        <p id="calcDesc" class="calc-desc"></p>
+      </div>
+      <div id="calcMount" class="calc-body"></div>
+      <div class="related">
+        <h2 id="relatedTitle">More tools</h2>
+        <div id="relatedChips" class="chips"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-in">
+    <p><strong>CalcSpace</strong> — All-in-One Calculator Hub. Runs entirely in your browser; theme, favourites and recents stay on this device.</p>
+    <p class="dim">Rounding: results show up to 10 significant decimals unless a tool states otherwise · Built with vanilla HTML, CSS &amp; JavaScript · © 2026</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><div style="padding:2rem;text-align:center">CalcSpace needs JavaScript to run its calculators.</div></noscript>
+<script src="script.js"></script>
+</body>
+</html>
